@@ -3,34 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Derek Trauner - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .cta-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: #667eea;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .content {
+            background: white;
+            border-radius: 15px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin-top: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .bio {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .cta-links {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi! I'm a passionate developer with experience in building modern web applications. I love creating clean and efficient websites.</p>
-        <p>Connect with me on <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a> and check out my <a href="/path/to/resume.pdf" target="_blank">Resume</a>.</p>
-    </section>
-    <section id="projects">
-        <h2>My Projects</h2>
-        <ul>
-            <li>Project 1 - <a href="https://linktoproject1.com" target="_blank">View</a></li>
-            <li>Project 2 - <a href="https://linktoproject2.com" target="_blank">View</a></li>
-        </ul>
-    </section>
-    <footer>
-        <p>&copy; 2026 Your Name. All rights reserved.</p>
-    </footer>
+    <div class="container">
+        <div class="header">
+            <h1>Derek Trauner</h1>
+            <p>Technology Development & Management</p>
+            <div class="cta-links">
+                <a href="https://www.linkedin.com/in/derek-trauner/" target="_blank" class="btn btn-primary">LinkedIn Profile</a>
+                <a href="/public/resume.pdf" class="btn btn-secondary">Download Resume</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <section class="section">
+                <h2>About Me</h2>
+                <p class="bio">
+                    I'm a passionate technology development and management student focused on creating innovative solutions and leading high-performing teams. With a strong foundation in technical skills and leadership, I'm committed to driving meaningful impact in the technology industry.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>Skills & Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">Project Management</div>
+                    <div class="skill-card">Leadership</div>
+                    <div class="skill-card">Full-Stack Development</div>
+                    <div class="skill-card">Problem Solving</div>
+                    <div class="skill-card">System Design</div>
+                    <div class="skill-card">Team Collaboration</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Get In Touch</h2>
+                <p class="bio">
+                    I'm always interested in connecting with other professionals and exploring new opportunities. Feel free to reach out via LinkedIn or review my resume to learn more about my experience and qualifications.
+                </p>
+            </section>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Derek Trauner. All rights reserved.</p>
+        </div>
+    </div>
 </body>
 </html>
